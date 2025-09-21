@@ -13,26 +13,26 @@ public class HamburgerBrett extends Thread{
 		this.KAPASITET = KAPASITET;
 	}
 	
-	//metode hvor kokken legger på hamburger 
+
 	public synchronized void leggPaa(String kokk) throws InterruptedException {
 		while(brett.size() == KAPASITET) {
-			wait(); // må vente til det blir ledig
+			wait(); 
 			System.out.println(kokk + " klar med hambuger, men brettet fullt. Venter!");
 		}
-		brett.add(burgerNr); // legger på burgerNr på brettet
-		Thread.sleep(3000); //synes det gikk litt vel fort, legger på 3 sek mellom hver
+		brett.add(burgerNr); 
+		Thread.sleep(3000); 
 		System.out.println(kokk  + " legger på hamburger " + burgerNr + " " + brett);
-		burgerNr++; // øker med en for hver gang 
-		notifyAll(); //gir beskjed til alle 
+		burgerNr++; 
+		notifyAll();
 	}
 	
-	//metode hvor servitørene tar av hamburgere 
+	
 	public synchronized void taAv(String servitor) throws InterruptedException {
 		while(brett.isEmpty()) {
 			wait();
 			System.out.println(servitor + " ønsket å ta av en hamburger, men brettet er tomt. Venter!");
 		}
-		int burger = brett.poll(); //tar ut den første i køen 
+		int burger = brett.poll(); 
 		Thread.sleep(3000);
 		System.out.println(servitor + " tar av hamburger " + burger + " " + brett);
 		notifyAll();
