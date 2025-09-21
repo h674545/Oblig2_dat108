@@ -13,7 +13,7 @@ public class Servitor extends Thread{
 	public void run() {
 		while(true) {
 			try {
-				Thread.sleep((int)(Math.random()) * 2000); //tid det tar å servere er random, 2 sek 
+				Thread.sleep((int)(Math.random()) * 2000);
 				brett.taAv("Servitør " + navn);
 			} catch (InterruptedException e) {
 			}
