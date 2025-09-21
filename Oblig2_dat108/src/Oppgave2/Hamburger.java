@@ -13,10 +13,10 @@ public class Hamburger {
 		HamburgerBrett brett = new HamburgerBrett(KAPASITET);
 		
 			for(String navn : kokker) {
-				new Kokk(brett, navn).start(); //starter tråden kokk
+				new Kokk(brett, navn).start(); 
 			}
 			for(String navn : servitorer) {
-				new Servitor(brett, navn).start(); // starter tråden servitor
+				new Servitor(brett, navn).start(); 
 			}
 	}
 
