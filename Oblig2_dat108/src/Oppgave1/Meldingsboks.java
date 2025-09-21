@@ -4,7 +4,7 @@ import javax.swing.JOptionPane;
 
 public class Meldingsboks extends Thread {
 	
-	private Utskriftsloop t; //oppretter objekt av typen utskriftsloop
+	private Utskriftsloop t; 
 	
 	public Meldingsboks(Utskriftsloop t) {
 		this.t = t;
