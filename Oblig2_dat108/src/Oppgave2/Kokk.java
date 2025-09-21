@@ -13,7 +13,7 @@ public class Kokk extends Thread{
 	public void run() {
 		try {
 			while(true) {
-				Thread.sleep((int)(Math.random()) * 2000); //tid det tar å lage er random, 2 sek
+				Thread.sleep((int)(Math.random()) * 2000); 
 				brett.leggPaa("Kokk " + navn);
 			} 
 		}catch (InterruptedException e) {
