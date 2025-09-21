@@ -10,8 +10,5 @@ public class Main extends Thread{
 	Meldingsboks meldingInput = new Meldingsboks(melding);
 	meldingInput.start();
 
-	// fikse så boksen lukkes når man trykker avbryt? 
-	//meldinginput skrives ikke ut om og om igjen
-	
 	}
 }
