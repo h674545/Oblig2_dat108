@@ -13,7 +13,7 @@ public class Utskriftsloop extends Thread{
 		while(fortsett) {
 			System.out.println("Hello verden!");
 			try {
-				Thread.sleep(3000); //setter den til 3 sek 
+				Thread.sleep(3000); 
 			} catch (InterruptedException e) {
 			}
 		}}
